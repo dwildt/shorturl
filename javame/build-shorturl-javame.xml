@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://www.j2meforums.com/wiki/index.php/Ant_and_Antenna_Build_file -->
+<project name="short-url-javame-jar" default="jar" basedir=".">
+    <description>Builds, and package the project .</description>
+	
+  <target name="compile">
+    <javac srcdir="src"  destdir="build"/>
+  </target>
+  
+  <target name="jar" depends="compile">
+    <jar destfile="build/shorturl-javame.jar"
+         basedir="build"
+         includes="com.shorturl.javame/*.class"
+         />
+  </target>
+  
+</project>
