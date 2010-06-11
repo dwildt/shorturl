@@ -13,7 +13,7 @@ import javax.microedition.lcdui.*;
 /**
  * @author danielwildt
  */
-public class MigreMeUrlShorterMidlet extends MIDlet implements CommandListener {
+public class MigreMeUrlShorterMidlet extends MIDlet implements CommandListener, Runnable {
 
     private boolean midletPaused = false;
 
@@ -182,7 +182,7 @@ public class MigreMeUrlShorterMidlet extends MIDlet implements CommandListener {
     public TextField getUrlTextField() {
         if (urlTextField == null) {//GEN-END:|22-getter|0|22-preInit
             // write pre-init user code here
-            urlTextField = new TextField("Type URL", null, 32, TextField.ANY);//GEN-LINE:|22-getter|1|22-postInit
+            urlTextField = new TextField("Type URL", null, 300, TextField.URL);//GEN-LINE:|22-getter|1|22-postInit
             // write post-init user code here
         }//GEN-BEGIN:|22-getter|2|
         return urlTextField;
@@ -251,6 +251,11 @@ public class MigreMeUrlShorterMidlet extends MIDlet implements CommandListener {
     }
 
     private void shortUrlCommandAction() {
+        Thread t = new Thread(this);
+        t.start();
+    }
+
+    public void run() {
         ShortUrl shortUrl = new ShortUrl();
         try {
             getAlert().setString(shortUrl.fromMigreMe(urlTextField.getString()));

@@ -66,8 +66,8 @@
                         <Property name="codeGenerated" typeID="Pboolean" value="Vtrue"/>
                         <Property name="label" typeID="Pjava.lang.String" value="VType URL"/>
                         <Property name="itemCommandListener" typeID="C#ItemCommandListener" value="R17"/>
-                        <Property name="maxSize" typeID="Pint" value="V32"/>
-                        <Property name="constraints" typeID="Pint" value="V0"/>
+                        <Property name="maxSize" typeID="Pint" value="V300"/>
+                        <Property name="constraints" typeID="Pint" value="V4"/>
                     </Component>
                     <Component componentID="24" typeID="C#CommandEventSource">
                         <Property name="displayable" typeID="Cjavax.microedition.lcdui.Displayable" value="R14"/>

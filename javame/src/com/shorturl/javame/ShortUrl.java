@@ -5,12 +5,6 @@
 
 package com.shorturl.javame;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import javax.microedition.io.Connector;
-import javax.microedition.io.HttpConnection;
-
 /**
  *
  * @author danielwildt
