@@ -4,3 +4,5 @@ Release notes:
 
 * June 10th 
   - Migre.me service available.
+    http://github.com/dwildt/shorturl/blob/master/javame/src/com/shorturl/javame/ShortUrl.java
+	http://github.com/dwildt/shorturl/blob/master/javame-test/src/com/shorturl/javame/test/MigreMeTest.java
